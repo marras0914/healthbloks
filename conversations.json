@@ -1,0 +1,75 @@
+﻿[
+	{
+		"id":1234,
+		"subject": "Lab Results",
+		"lastmsgdate": "12/12/2014 11:00am",
+		"hasBeenRead": false,
+		"hasAttachments": true,
+		"providerId": 0,
+		"patientId": 1289
+	},
+	{
+		"id":1235,
+		"subject": "Insurance Reminder",
+		"lastmsgdate": "12/12/2014 10:00am",
+		"hasBeenRead": false,
+		"hasAttachments": false,
+		"providerId": 0,
+		"patientId": 1289
+	},
+	{
+		"id":1236,
+		"subject": "Annual Checkup",
+		"lastmsgdate": "12/11/2014 4:00pm",
+		"hasBeenRead": true,
+		"hasAttachments": false,
+		"providerId": 0,
+		"patientId": 1289
+	},
+	{
+		"id":1236,
+		"subject": "Fill Out Forms",
+		"lastmsgdate": "12/11/2014 3:00pm",
+		"hasBeenRead": true,
+		"hasAttachments": true,
+		"providerId": 0,
+		"patientId": 1289
+	},
+	{
+		"id":1237,
+		"subject": "Appointment Reminder",
+		"lastmsgdate": "12/10/2014 4:00pm",
+		"hasBeenRead": true,
+		"hasAttachments": false,
+		"providerId": 0,
+		"patientId": 1289
+	},
+	{
+		"id":1238,
+		"subject": "Welcome Message",
+		"lastmsgdate": "12/10/2014 2:00pm",
+		"hasBeenRead": true,
+		"hasAttachments": false,
+		"providerId": 0,
+		"patientId": 1289
+	},
+	{
+		"id":1239,
+		"subject": "New Physician Coming On Board",
+		"lastmsgdate": "11/20/2014 2:00pm",
+		"hasBeenRead": true,
+		"hasAttachments": false,
+		"providerId": 0,
+		"patientId": 1289
+	},
+	{
+		"id":1239,
+		"subject": "Welcome to Dr. Hodgkins' Office",
+		"lastmsgdate": "12/1/2014 9:00am",
+		"hasBeenRead": true,
+		"hasAttachments": false,
+		"providerId": 1,
+		"patientId": 1289
+	}
+
+]

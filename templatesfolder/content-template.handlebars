@@ -1,0 +1,52 @@
+     
+
+     {{#each this}}
+     {{#if  @first }}
+     <div class="content active" id="panel{{conversationId}}">
+          <div class="fixed">
+               <div class="row">
+                    <div class="subject-bar">
+                         <h3><span></span></h3>
+                    </div>     
+               </div>
+               
+               <div class="row">
+                    <form action="" id="input-text"> 
+                         <div class="row ">
+                              <div class="large-12 columns">
+                                   <textarea placeholder="Type new message here"></textarea>
+                              </div>
+                         </div>
+                    </form>
+               </div>
+          </div>
+          <div >
+          <div class="bubble-container scroll"></div>
+          </div>   
+     </div>
+     {{/if}}
+     {{#unless @first }}
+     <div class="content" id="panel{{conversationId}}">
+          <div class="fixed ">
+               <div class="row">
+                    <div class="subject-bar">
+                         <h3><span></span></h3>
+                    </div>     
+               </div>
+               
+               <div class="row">
+                    <form action="" id="input-text"> 
+                         <div class="row ">
+                              <div class="large-12 columns">
+                                   <textarea placeholder="Type new message here"></textarea>
+                              </div>
+                         </div>
+                    </form>
+               </div>
+          </div>
+           <div >
+          <div class="bubble-container scroll"></div>
+          </div>   
+     </div>
+     {{/unless}}
+     {{/each}}

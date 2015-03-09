@@ -1,0 +1,287 @@
+
+$tab-bg1-color: #2e8def; //medium blue 
+$tab-bg2-color: #36bbea; //light blue
+$tab-bg3-color: #0f5989; //dark blue
+$contrast-color: #efee79; //contrast yellow
+$other-color: #FF0000; //red
+
+@font-face {
+    font-family: "Source Sans Pro", sans-serif;
+    src: url("@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro);")
+}
+
+// Sets off-canvas menu to full height of screen
+html, body, .off-canvas-wrap, .inner-wrap, .main-section, .container
+{
+  height: 100%;
+}
+
+.scroll{
+    div::-webkit-scrollbar {
+          width: 12px;
+    }      
+    div::-webkit-scrollbar-track {
+         -webkit-box-shadow: inset 0 0 0px rgba(0,0,0,0.3);
+    }      
+    div::-webkit-scrollbar-thumb {
+        background-color: darkgrey;
+        outline: 1px solid slategrey;
+    }
+   
+    overflow: scroll;
+    height: 89%;
+    margin-right: -5px;
+    padding-right: 15px;
+}
+
+
+
+
+
+nav.top-bar {
+    text-align: center;
+     section.top-bar-section {
+          display: inline-block;
+          padding: 10 10rem;
+     }
+}
+
+
+// navigation for menu and small screen off-canvas
+.tab-bar {
+     background-color: $white;
+     height: 85px;
+     .menu-icon{
+          height: 5.35rem;
+     }
+}
+.right-small, .left-small{
+     border-left: 0px;
+     border-right: 0px;
+}
+aside.left-off-canvas-menu {
+    $off-canvas-width: 100%;
+    width: 100%;
+    right: 0;
+    background: #f2f2f2;
+    overflow-y: hidden;
+}
+
+// for small screen only
+.middle{
+     li h5 {
+         margin-top: 10px;
+         color: $white;
+    }
+    li select {
+         margin: 6px 150px 6px 30px;
+         height: 2rem;
+         padding-left: 20px;
+         width:70%;
+    }
+}
+
+nav.top-bar, .top-bar-section ul li {
+    background-color: $secondary-color;
+    a{
+        font-size: 1.8125rem;
+        line-height: 2.5rem;
+        height: 45px;
+    }
+}
+
+.top-bar-section li:not(.has-form) a:not(.button){
+     line-height: 2.5rem;
+}
+     
+
+// Conversation bubbles 
+.provider {
+    float: left;
+    position: relative;
+    max-width: 85%;
+    height: 50%;
+    padding: 21px;
+    //background: #FFFFFF;
+    background: scale-color($tab-bg2-color, $lightness: 20%);
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    border-radius: 25px;
+    //border: #2e8def solid 2px;
+    border: #2e8def solid 0px;
+    margin: 0px 0px 10px 25px;
+}
+.provider:after {
+    content: '';
+    position: absolute;
+    border-style: solid;
+    border-width: 13px 25px 13px 0;
+    border-color: transparent scale-color($tab-bg2-color, $lightness: 20%);
+    display: block;
+    width: 0;
+    z-index: 1;
+    left: -25px;
+    top: 35px;
+}
+//.provider:before {
+//    content: '';
+//    position: absolute;
+//    border-style: solid;
+//    border-width: 14px 26px 14px 0;
+//    border-color: transparent #0f5989;
+//    display: block;
+//    width: 0;
+//    z-index: 0;
+//    left: -28px;
+//    top: 46px;
+//}
+.patient {
+    float: right;
+    position: relative;
+    height: 50%;
+    padding: 21px;
+    max-width: 85%;
+    //background: #FFFFFF;
+    //background: #36bbea;
+    background: $contrast-color;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    border-radius: 25px;
+    //border: #36bbea solid 2px;
+    border: #36bbea solid 0px;
+    margin: 0px 25px 10px 0px;
+    }
+.patient:after {
+    content: '';
+    position: absolute;
+    border-style: solid;
+    border-width: 13px 0 13px 25px;
+    //border-color: transparent #36bbea;
+    border-color: transparent $contrast-color;
+    display: inline-block;
+    width: 0;
+    z-index: 1;
+    right: -25px;
+    bottom: 35px;
+}
+//.patient:before {
+//    content: '';
+//    position: absolute;
+//    border-style: solid;
+//    border-width: 14px 0 14px 26px;
+//    border-color: transparent #36bbea;
+//    display: inline-block;
+//    width: 0;
+//    z-index: 0;
+//    right: -28px;
+//    top: 87px;
+//}
+.patient, .provider {
+    font-family: "Source Sans Pro";
+}
+
+// group of buttons left nav (search, plus, help)
+nav.top-bar:not(ul.left) {
+text-align:center;
+display:inline;
+position: absolute;
+}
+section.top-bar-section {
+display: inline-block;
+}
+
+// tabs styles 
+dd h4, dd p{
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.panel h4{
+    margin-bottom: 0;
+}
+
+dd.small-block-grid-2>li{
+    width:50%;
+}
+
+.small-block-grid-2{
+    margin-right: 10px;
+}
+
+// new message and attachment icon styles
+.fi-paperclip{
+    font-size: 1.6em;
+    color: $white;
+    padding-right: 15px;
+}
+.fi-asterisk{
+    font-size: 1.3em;
+    color: $other-color;
+
+}
+
+.content{
+    .subject-bar{
+        @include panel();
+        margin-right: auto;
+        margin-left: auto;
+        width: 90%;
+        background-color: scale-color($tab-bg1-color, $lightness: -20%);
+        text-align: center;
+        border-width: 0px;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        border-radius: 10px;
+        margin-top: 20px;
+        margin-bottom: 10px;
+        h3{
+            color: $white;
+        }
+    }
+
+     form {
+        width: 90%;
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
+
+.patient, .provider {
+    font-family: "Source Sans Pro";
+}
+
+.small-0 .medium-8 .large-7 .columns .panel{
+    background-color: $white;
+}
+
+div.fixed {
+    position: absolute;
+    height: 20%;
+}
+
+.bubble-container{ 
+    position: absolute;
+    top: 0; 
+    bottom: 0; 
+    left: 15px; 
+    right: 10px;
+    overflow: auto;
+    padding-bottom: 200px;
+    margin-top: 150px;
+}
+
+
+.move-right .exit-off-canvas{
+    left: auto;
+    font-size: 14pt;
+    background: transparent;
+    box-shadow: none;
+    padding-right: 6px;
+}
+
+@media screen and (max-width: 50em) and (min-width: 45em){
+    .tabs {
+        h4{
+            font-size: 15pt;
+        }
+    }
+}

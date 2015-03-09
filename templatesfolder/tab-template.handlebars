@@ -1,0 +1,61 @@
+     
+  
+          {{#each this}}
+               {{#if @first }}
+               
+                    <dd id="{{@index}}" class="tab-title active">
+                         <a href="#panel{{id}}" role="tab" aria-selected="true">
+                              
+                              <div class="row">
+                                   <div class="small-9 columns">
+                                        <h4>{{subject}}</h4>   
+                                   </div>
+                                   <div class="small-3 columns">
+                                        {{#unless hasBeenRead}}
+                                             <i class="fi-asterisk"></i>
+                                        {{/unless}}   
+                                   </div>
+                              </div>                                      
+                              <div class="row">
+                                   <div class="small-9 columns">
+                                        <small>{{lastmsgdate}}</small> 
+                                   </div>
+                                   <div class="small-3 columns">
+                                        {{#if hasAttachments}}
+                                             <i class="fi-paperclip"></i>
+                                        {{/if}} 
+                                   </div>
+                              </div>   
+                         </a>
+                    </dd>
+                  
+               {{/if}}
+               {{#unless @first }}
+                    
+                    <dd id="{{@index}}" class="tab-title">
+                         <a href="#panel{{id}}" role="tab" aria-selected="false">
+                              <div class="row">
+                                   <div class="small-9 columns">
+                                         <h4>{{subject}}</h4>   
+                                   </div>
+                                   <div class="small-3 columns">
+                                        {{#unless hasBeenRead}}
+                                             <i class="fi-asterisk"></i>
+                                        {{/unless}}   
+                                   </div>
+                              </div>                                      
+                              <div class="row">
+                                   <div class="small-9 columns">
+                                        <small>{{lastmsgdate}}</small> 
+                                   </div>
+                                   <div class="small-3 columns">
+                                        {{#if hasAttachments}}
+                                             <i class="fi-paperclip"></i>
+                                        {{/if}} 
+                                   </div>
+                              </div>      
+                         </a>
+                    </dd>
+               
+               {{/unless}}
+          {{/each}}             
